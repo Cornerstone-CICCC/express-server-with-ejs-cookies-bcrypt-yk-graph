@@ -1,3 +1,11 @@
 <h1 class="text-xl font-bold mb-4">Welcome to the Home Page</h1>
-<a href="/login" class="text-orange-700 hover:underline">Login</a>
-<a href="/register" class="text-orange-700 hover:underline">Register</a>
+
+<% if (user) { %>
+  <p class="mb-4">Logged in as: <span class="font-semibold"><%= user %></span></p>
+  <form action="/api/auth/logout" method="POST">
+    <button type="submit" class="bg-orange-700 text-white px-4 py-2 rounded">Logout</button>
+  </form>
+<% } else { %>
+  <a href="/login" class="text-orange-700 hover:underline">Login</a>
+  <a href="/register" class="text-orange-700 hover:underline mt-2">Register</a>
+<% } %>
