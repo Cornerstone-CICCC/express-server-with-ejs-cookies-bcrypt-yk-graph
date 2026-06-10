@@ -1,3 +1,11 @@
+### How to run this project
+
+Run the following command in the project root:
+
+```
+./setup-env.sh
+```
+
 ### Project Requirements
 
 1. **Setup Server with EJS:**
@@ -5,7 +13,7 @@
    - Define the directories for static files and EJS templates.
 
 2. **Create Home Page (/):**
-   - Create a simple home page with links: 
+   - Create a simple home page with links:
      - `<a href="/login">Login</a>`
      - `<a href="/register">Register</a>`
 
